@@ -142,30 +142,3 @@ if not df.empty:
 else:
     print("The data is not tabular and cannot be processed further.")
 
-
-
-
-
-
-
-
-
-# def store_in_database(df):
-#     """
-#     Store the data into an SQLite database for future preprocessing.
-
-#     Args:
-#         df (pd.DataFrame): The DataFrame to store.
-#     """
-#     # Connect to SQLite database (creates the file if it doesn't exist)
-#     conn = sqlite3.connect('data_storage.db')
-#     table_name = 'preprocessed_data'
-
-#     # Store DataFrame to the database
-#     try:
-#         df.to_sql(table_name, conn, if_exists='replace', index=False)
-#         print(f"Data has been stored in the database table '{table_name}'.")
-#     except Exception as e:
-#         print(f"Error storing data in the database: {e}")
-#     finally:
-#         conn.close()
